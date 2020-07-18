@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-title>Fornecedores</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-fab vertical="top" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="cadastroFornecedor()">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+<ion-content>
+  <ion-card *ngFor="let fornecedor of fornecedores">
+    <ion-card-header>
+      <ion-icon
+        id="delete"
+        name="trash-outline"
+        (click)="delete(fornecedor)"
+        style="float: right;"
+      ></ion-icon>
+      <ion-icon
+        id="edit"
+        name="create-outline"
+        (click)="edit(fornecedor)"
+        style="float: right;"
+      ></ion-icon>
+    </ion-card-header>
+    <ion-card-content>
+      Fornecedor: {{fornecedor.nmFornecedor}} <br />
+      Razão Social: {{fornecedor.social}} <br />
+      CNPJ: {{fornecedor.cnpj}}<br />
+      Endereço: {{fornecedor.endereco}}<br />
+      Cidade: {{fornecedor.cidade}}<br />
+    </ion-card-content>
+  </ion-card>
+
+  <div></div>
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button
+        (click)="cancelar()"
+        defaultHref="fornecedores"
+      ></ion-back-button>
+      <ion-title style="text-align: center;">Cadastrar Fornecedor</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header> </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="fornecedorForm">
+        <ion-item>
+          <ion-label position="floating">Nome</ion-label>
+          <ion-input type="text" formControlName="nmFornecedor"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Razão Social </ion-label>
+          <ion-input type="text" formControlName="social"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">CNPJ </ion-label>
+          <ion-input type="text" formControlName="cnpj"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Endereço </ion-label>
+          <ion-input type="text" formControlName="endereco"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Cidade </ion-label>
+          <ion-input type="text" formControlName="cidade"></ion-input>
+        </ion-item>
+
+        <ion-button
+          expand="block"
+          [disabled]="!fornecedorForm.valid"
+          (click)="salvar()"
+          >Salvar</ion-button
+        >
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

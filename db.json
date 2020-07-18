@@ -1,0 +1,12 @@
+{
+  "fornecedores": [
+    {
+      "id": 4,
+      "nmFornecedor": "Gabriel",
+      "social": "Barbosa",
+      "cnpj": "16168161",
+      "endereco": "avenida",
+      "cidade": "SJ"
+    }
+  ]
+}
